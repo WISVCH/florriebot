@@ -2,7 +2,7 @@
 #   CHue
 #
 # Commands:
-#   hubot alert [<timeout>] - Blink hue lamps at CH for <timeout> milliseconds
+#   hubot chue alert [<timeout>] - Blink hue lamps at CH for <timeout> milliseconds
 #   hubot bvoranje - B'voranje :owl:
 
 module.exports = (robot) ->
