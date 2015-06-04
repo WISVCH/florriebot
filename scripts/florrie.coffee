@@ -6,12 +6,16 @@
 #   hubot me gif - Florrie.gif <3
 
 module.exports = (robot) ->
+  robot.respond /(florrie )?me(?! gif)/i, (msg) ->
+    imageMe msg, 'florrie', (url) ->
+      msg.send url
+
   robot.respond /(florrie )?me gif/i, (msg) ->
     imageMe msg, 'florrie', true, (url) ->
       msg.send url
 
-  robot.respond /(florrie )?me(?! gif)/i, (msg) ->
-    imageMe msg, 'florrie', (url) ->
+  robot.hear /gif me florrie/i, (msg) ->
+    imageMe msg, 'florrie', true, (url) ->
       msg.send url
 
 imageMe = (msg, query, animated, faces, cb) ->
