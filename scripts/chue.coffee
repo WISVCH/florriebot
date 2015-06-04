@@ -3,7 +3,7 @@
 #
 # Commands:
 #   hubot chue alert [<timeout>] - Blink hue lamps at CH for <timeout> milliseconds
-#   hubot chue color [<lamp>] #<hex> - Change hue lamp <lamp> (or all) to color <hex>
+#   hubot chue colour [<lamp>] #<hex> - Change hue lamp <lamp> (or all) to colour <hex>
 #   hubot bvoranje - B'voranje :owl:
 
 module.exports = (robot) ->
@@ -13,13 +13,13 @@ module.exports = (robot) ->
         .get() (err, res, body) ->
             msg.emote "Blinking hue lamps at CH"
 
-  robot.respond /chue color (\d*)? ?#(.*)/i, (msg) ->
+  robot.respond /chue colou?r (\d*)? ?#(.*)/i, (msg) ->
     lamp = if msg.match[1] is undefined then "all" else msg.match[1]
-    color = msg.match[2]
+    colour = msg.match[2]
 
-    robot.http("http://gadgetlab.chnet/color/#{lamp}/#{color}")
+    robot.http("http://gadgetlab.chnet/color/#{lamp}/#{colour}")
         .get() (err, res, body) ->
-            msg.emote "Changed color of lamps (#{lamp}) to ##{color}"
+            msg.emote "Changed colour of lamps (#{lamp}) to ##{colour}"
 
   robot.respond /bvoranje/i, (msg) ->
     robot.http("http://gadgetlab.chnet/oranje")
