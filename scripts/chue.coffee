@@ -19,7 +19,7 @@ module.exports = (robot) ->
 
     robot.http("http://gadgetlab.chnet/color/#{lamp}/#{color}")
         .get() (err, res, body) ->
-            msg.emote "Changed color of lamps (#{lamp}) to #{color}"
+            msg.emote "Changed color of lamps (#{lamp}) to ##{color}"
 
   robot.respond /bvoranje/i, (msg) ->
     robot.http("http://gadgetlab.chnet/oranje")
