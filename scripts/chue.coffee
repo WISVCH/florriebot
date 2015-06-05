@@ -13,6 +13,11 @@ module.exports = (robot) ->
         .get() (err, res, body) ->
             msg.emote "Blinking hue lamps at CH"
 
+  robot.respond /chue random/i, (msg) ->
+    robot.http("http://gadgetlab.chnet/random")
+        .get() (err, res, body) ->
+            msg.emote "Changed colour of hue lamps at CH to a random colour"
+
   robot.respond /chue colou?r (\d)? ?#?([a-fA-F0-9]{6})/i, (msg) ->
     lamp = if msg.match[1] is undefined then "all" else msg.match[1]
     colour = msg.match[2]
