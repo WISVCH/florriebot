@@ -13,7 +13,7 @@ module.exports = (robot) ->
         .get() (err, res, body) ->
             msg.emote "Blinking hue lamps at CH"
 
-  robot.respond /chue colou?r (\d*)? ?#(.*)/i, (msg) ->
+  robot.respond /chue colou?r (\d)? ?#?([a-fA-F0-9]{6})/i, (msg) ->
     lamp = if msg.match[1] is undefined then "all" else msg.match[1]
     colour = msg.match[2]
 
