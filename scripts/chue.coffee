@@ -4,7 +4,7 @@
 # Commands:
 #   hubot chue alert [<timeout>] - Blink hue lamps at CH for <timeout> milliseconds
 #   hubot chue colour [<lamp>] #<hex> - Change hue lamp <lamp> (or all) to colour <hex>
-#   hubot chue random - Change hue lamps to a random colour <hex>
+#   hubot chue random - Change hue lamps to a random colour
 #   hubot bvoranje - B'voranje :owl:
 
 module.exports = (robot) ->
