@@ -7,7 +7,7 @@
 module.exports = (robot) ->
   robot.respond /gaben (me)? (.*)/i, (msg) ->
     imageMe msg, msg.match[2], false, true, (url) ->
-      msg.send('http://abb.ink/gaben.php?url='+ encodeURIComponent url)
+      msg.send('https://abb.ink/gaben/?'+ encodeURIComponent url)
 
 imageMe = (msg, query, animated, faces, cb) ->
   cb = animated if typeof animated == 'function'
