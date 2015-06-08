@@ -9,7 +9,7 @@
 module.exports = (robot) ->
   robot.respond /(gaben|cage|putin)[\s]+(?:me[\s]+)?(.*)/i, (msg) ->
     keyword = msg.match[2]
-    type = msg.match[1]
+    type = msg.match[1].toLowerCase()
     imageMe msg, keyword, false, true, (url) ->
       msg.send 'https://abb.ink/' + type + '/?' + encodeURIComponent url
 
