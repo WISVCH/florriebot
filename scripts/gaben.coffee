@@ -5,9 +5,11 @@
 #   hubot gaben me <query> - Returns gentleman gaben
 
 module.exports = (robot) ->
-  robot.respond /gaben (me)? (.*)/i, (msg) ->
-    imageMe msg, msg.match[2], false, true, (url) ->
-      msg.send('https://abb.ink/gaben/?'+ encodeURIComponent url)
+  robot.respond /(gaben|cage)[\s]+(?:me[\s]+)?(.*)/i, (msg) ->
+    keyword = msg.match[2]
+    type = msg.match[1]
+    imageMe msg, keyword, false, true, (url) ->
+      msg.send 'https://abb.ink/' + type + '/?' + encodeURIComponent url
 
 imageMe = (msg, query, animated, faces, cb) ->
   cb = animated if typeof animated == 'function'
