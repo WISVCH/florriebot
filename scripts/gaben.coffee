@@ -2,7 +2,8 @@
 #   All praise GabeN
 #
 # Commands:
-#   hubot gaben me <query> - Returns gentleman gaben
+#   hubot gaben me <query> - Returns gentleman gaben on top of <query>
+#   hubot cage me <query> - Returns a caged version of <query>
 
 module.exports = (robot) ->
   robot.respond /(gaben|cage)[\s]+(?:me[\s]+)?(.*)/i, (msg) ->
