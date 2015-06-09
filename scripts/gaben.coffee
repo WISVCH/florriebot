@@ -4,11 +4,12 @@
 # Commands:
 #   hubot gaben me <query> - Returns gentleman gaben on top of <query>
 #   hubot cage me <query> - Returns a caged version of <query>
+#   hubot putin me <query> - Returns your glorious leader on top of <query>
 
 module.exports = (robot) ->
-  robot.respond /(gaben|cage)[\s]+(?:me[\s]+)?(.*)/i, (msg) ->
+  robot.respond /(gaben|cage|putin)[\s]+(?:me[\s]+)?(.*)/i, (msg) ->
     keyword = msg.match[2]
-    type = msg.match[1]
+    type = msg.match[1].toLowerCase()
     imageMe msg, keyword, false, true, (url) ->
       msg.send 'https://abb.ink/' + type + '/?' + encodeURIComponent url
 
