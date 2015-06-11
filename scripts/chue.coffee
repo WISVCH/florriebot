@@ -31,7 +31,8 @@ module.exports = (robot) ->
 
     robot.http("https://gadgetlab.chnet/chue/color/#{lamp}/#{colour}")
         .get() (err, res, body) ->
-            msg.emote body
+            if res.statusCode == 200
+              msg.emote body
 
   robot.respond /bvoranje/i, (msg) ->
     robot.http("https://gadgetlab.chnet/chue/oranje")
