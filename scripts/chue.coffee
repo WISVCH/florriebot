@@ -26,13 +26,14 @@ module.exports = (robot) ->
         .get() (err, res, body) ->
             msg.emote "Put on a colourloop at CH"
 
-  robot.respond /chue colou?r (\d)? ?#?([a-fA-F0-9]{6})/i, (msg) ->
+  robot.respond /chue colou?r (\d)? ?#?(.*)/i, (msg) ->
     lamp = if msg.match[1] is undefined then "all" else msg.match[1]
     colour = msg.match[2]
 
     robot.http("#{chueURL}color/#{lamp}/#{colour}")
         .get() (err, res, body) ->
-            msg.emote "Changed colour of lamps (#{lamp}) to ##{colour}"
+            if res.statusCode == 200
+              msg.emote body
 
   robot.respond /bvoranje/i, (msg) ->
     robot.http("#{chueURL}oranje")
