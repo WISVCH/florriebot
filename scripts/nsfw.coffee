@@ -6,12 +6,15 @@
 #   hubot nsfw animate me <query> - The same thing as `nsfw image me`, except adds a few parameters to try to return an animated GIF instead.
 
 module.exports = (robot) ->
-  robot.respond /nsfw (image|img)( me)? (.*)/i, (msg) ->
-    imageMe msg, msg.match[3], (url) ->
-      msg.send url
+  robot.respond /nsfw[\s]+(image|img|gif|animate)[\s]+(?:me[\s]+)?(.*)/i, (msg) ->
+    animate = false
+    if msg.match[1] == 'gif' or msg.match[1] == 'animate'
+      animate = true
+    keyword = msg.match[2]
+    if Math.random() <= 0.1 and keyword.indexOf('bitch') > -1
+      keyword = keyword.replace(/bitches/i, 'female dogs').replace(/bitch/i, 'female dog')
 
-  robot.respond /nsfw animate( me)? (.*)/i, (msg) ->
-    imageMe msg, msg.match[2], true, (url) ->
+    imageMe msg, keyword, animate, (url) ->
       msg.send url
 
 imageMe = (msg, query, animated, faces, cb) ->

@@ -9,31 +9,39 @@
 #   hubot bvoranje - B'voranje :owl:
 
 module.exports = (robot) ->
+  chueURL = 'https://gadgetlab.chnet/chue/'
   robot.respond /chue alert ?(.*)?/i, (msg) ->
     timeout = if msg.match[1] is undefined then 5502 else msg.match[1]
-    robot.http("https://gadgetlab.chnet/alert?timeout=#{timeout}")
+    robot.http("#{chueURL}alert?timeout=#{timeout}")
         .get() (err, res, body) ->
             msg.emote "Blinking hue lamps at CH"
 
   robot.respond /chue random/i, (msg) ->
-    robot.http("https://gadgetlab.chnet/random")
+    robot.http("#{chueURL}random")
         .get() (err, res, body) ->
             msg.emote "Changed colour of hue lamps at CH to a random colour"
 
   robot.respond /chue colou?rloop/i, (msg) ->
-    robot.http("https://gadgetlab.chnet/colorloop")
+    robot.http("#{chueURL}colorloop")
         .get() (err, res, body) ->
             msg.emote "Put on a colourloop at CH"
+            
+  robot.respond /chue strobe ?(\d+)*/i, (msg) ->
+    duration = if msg.match[1] is undefined then "" else "?duration=" + msg.match[1]
+    robot.http("#{chueURL}strobe/all" + duration)
+        .get() (err, res, body) ->
+            msg.emote "Flashed for every one at CH"
 
-  robot.respond /chue colou?r (\d)? ?#?([a-fA-F0-9]{6})/i, (msg) ->
+  robot.respond /chue colou?r (\d)? ?#?(.*)/i, (msg) ->
     lamp = if msg.match[1] is undefined then "all" else msg.match[1]
     colour = msg.match[2]
 
-    robot.http("https://gadgetlab.chnet/color/#{lamp}/#{colour}")
+    robot.http("#{chueURL}color/#{lamp}/#{colour}")
         .get() (err, res, body) ->
-            msg.emote "Changed colour of lamps (#{lamp}) to ##{colour}"
+            if res.statusCode == 200
+              msg.emote body
 
   robot.respond /bvoranje/i, (msg) ->
-    robot.http("https://gadgetlab.chnet/oranje")
+    robot.http("#{chueURL}oranje")
         .get() (err, res, body) ->
             msg.emote ":owl:"
