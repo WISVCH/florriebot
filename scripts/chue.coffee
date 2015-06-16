@@ -6,6 +6,7 @@
 #   hubot chue colour [<lamp>] #<hex> - Change hue lamp <lamp> (or all) to colour <hex>
 #   hubot chue colourloop - Set hue lamps on colourloop
 #   hubot chue random - Change hue lamps to a random colour
+#   hubot chue strobe [<timeout>] - Strobe hue lamps for <timeout> milliseconds
 #   hubot bvoranje - B'voranje :owl:
 
 module.exports = (robot) ->
