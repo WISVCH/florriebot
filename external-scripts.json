@@ -10,5 +10,6 @@
   "hubot-rules",
   "hubot-shipit",
   "hubot-spotify-me",
-  "hubot-youtube"
+  "hubot-youtube",
+  "hubot-plusplus"
 ]
