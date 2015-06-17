@@ -8,9 +8,16 @@
 #   hubot chue random - Change hue lamps to a random colour
 #   hubot chue strobe [<timeout>] - Strobe hue lamps for <timeout> milliseconds
 #   hubot bvoranje - B'voranje :owl:
+#
+# Configuration:
+#   HUBOT_CHUE_URL = <scheme>://<host:port>/<basepath>/
 
 module.exports = (robot) ->
-  chueURL = 'https://gadgetlab.chnet/chue/'
+  chueURL = process.env.HUBOT_CHUE_URL
+  unless chueURL?
+    robot.logger.error "Missing HUBOT_CHUE_URL in environment"
+    return
+
   robot.respond /chue alert ?(.*)?/i, (msg) ->
     timeout = if msg.match[1] is undefined then 5502 else msg.match[1]
     robot.http("#{chueURL}alert?timeout=#{timeout}")
