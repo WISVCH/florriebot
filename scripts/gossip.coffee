@@ -8,4 +8,4 @@ module.exports = (robot) ->
   if robot.adapterName == 'slack'
     robot.respond /gossip[\s]+(.*)/i, (msg) ->
       msg = msg.match[1]
-      robot.customMessage {channel: '#anon', text: msg}
+      robot.messageRoom '#anon', msg
