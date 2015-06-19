@@ -14,6 +14,8 @@
     "hubot-irc": "~0.2.7",
     "hubot-maps": "0.0.2",
     "hubot-pandapanda": "0.9.2",
+    "hubot-plusplus": "~1.1.5",
+    "hubot-pokedex": "0.0.4",
     "hubot-pugme": "~0.1.0",
     "hubot-pugsofwesteros": "^1.0.3",
     "hubot-redis-brain": "0.0.2",
@@ -22,8 +24,7 @@
     "hubot-shipit": "~0.2.0",
     "hubot-slack": "~3.3.0",
     "hubot-spotify-me": "~1.0.1",
-    "hubot-youtube": "~1.0.0",
-    "hubot-plusplus": "~1.1.5"
+    "hubot-youtube": "~1.0.0"
   },
   "engines": {
     "node": "0.10.x"
