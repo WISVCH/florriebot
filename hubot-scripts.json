@@ -1,5 +1,6 @@
 [
 	"giphy.coffee",
 	"xkcd.coffee",
-	"applause.coffee"
+	"applause.coffee",
+    "beerme.coffee"
 ]
