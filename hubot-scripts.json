@@ -2,5 +2,6 @@
 	"giphy.coffee",
 	"xkcd.coffee",
 	"applause.coffee",
-    "beerme.coffee"
+    "beerme.coffee",
+    "facepalm.coffee"
 ]
