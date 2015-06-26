@@ -11,7 +11,7 @@ module.exports = (robot) ->
     if msg.match[1] == 'gif' or msg.match[1] == 'animate'
       animate = true
     keyword = msg.match[2]
-    if Math.random() <= 0.1 and keyword.indexOf('bitch') > -1
+    if Math.random() <= 0.75 and keyword.indexOf('bitch') > -1
       keyword = keyword.replace(/bitches/i, 'female dogs').replace(/bitch/i, 'female dog')
 
     imageMe msg, keyword, animate, (url) ->
