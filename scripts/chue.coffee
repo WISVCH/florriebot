@@ -37,7 +37,7 @@ module.exports = (robot) ->
         .get() (err, res, body) ->
             msg.emote "Put on a colourloop at CH"
             
-  robot.respond /chue strobe ?(\d+)*/i, (msg) ->
+  robot.respond /chue strobe ?(\d)? ?(\d+)*/i, (msg) ->
     lamp = if msg.match[1] is undefined then "all" else msg.match[1]
     duration = if msg.match[2] is undefined then "" else "?duration=" + msg.match[2]
     robot.http("#{chueURL}strobe/#{lamp}" + duration)
