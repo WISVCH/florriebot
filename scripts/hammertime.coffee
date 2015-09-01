@@ -4,7 +4,7 @@
 # Commands:
 
 module.exports = (robot) ->
-  robot.hear /stop/i, (msg) ->
+  robot.hear /^stop$/i, (msg) ->
     msg.send "HAMMERTIME!"
     imageMe msg, 'hammertime', true, (url) ->
       msg.send url
