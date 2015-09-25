@@ -29,7 +29,8 @@ module.exports = (robot) ->
     lamp = if msg.match[1] is undefined then "all" else msg.match[1]
     robot.http("#{chueURL}random/#{lamp}")
         .get() (err, res, body) ->
-            msg.emote "Changed colour of hue lamps at CH to a random colour"
+            if res.statusCode == 200
+              msg.emote body
 
   robot.respond /chue colou?rloop ?(\d)?/i, (msg) ->
     lamp = if msg.match[1] is undefined then "all" else msg.match[1]
