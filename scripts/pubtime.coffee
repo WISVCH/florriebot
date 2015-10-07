@@ -20,9 +20,9 @@ module.exports = (robot) ->
         msg.send("YES! Go grab a beer! :beers:")
       else
         if timeLeft > 60*60
-          msg.send("Still " + Math.round(timeLeft / 60 / 60) + " hours left... Hang on!")
+          msg.send("Still " + Math.ceil(timeLeft / 60 / 60) + " hours left... Hang on!")
         else if timeLeft > 60
-          msg.send("Still " + Math.round(timeLeft / 60) + " minutes left... Almost there!")
+          msg.send("Still " + Math.ceil(timeLeft / 60) + " minutes left... Almost there!")
         else
           msg.send("Only " + timeLeft + " seconds left! Get ready!")
     else
