@@ -23,8 +23,7 @@ module.exports = (robot) ->
           if success
             msg.send "Signed up @#{name}"
           else
-            console.log msg
-            msg.send "Signing up unsuccessful :cry:, you can manually sign up here: #{signUpURL}; debug: Tried to sign up with #{name}, #{email}, #{phone}"
+            msg.send "Signing up unsuccessful :cry:, you can manually sign up here: #{signUpURL}"
       catch err
         msg.send err
 
@@ -61,7 +60,7 @@ sendResponse = (url, formFields, cb) ->
     body += data
     return
   ).on 'end', ->
-    success = /Your response has been recorded/.test(body)
+    success = /ss-assignment-turned-in/.test(body)
     cb(null, success)
     return
   return
