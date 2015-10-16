@@ -10,7 +10,7 @@ module.exports = (robot) ->
   robot.respond /lecture[\s]+(?:me[\s]+)?(.*)/i, (msg) ->
     message = msg.message
     if !message.user?
-      msg.send 'Can\'t find your user details :cry:, you can manually sign up here: ' + signUpURL
+      msg.send "Can't find your user details :cry:, you can manually sign up here: #{signUpURL}"
     else
       phone = msg.match[1]
       email = message.user.email_address
@@ -21,9 +21,10 @@ module.exports = (robot) ->
             msg.send err
             return
           if success
-            msg.send 'Signed up @'+ name
+            msg.send "Signed up @#{name}"
           else
-            msg.send 'Signing up unsuccessful :cry:, you can manually sign up here: ' + signUpURL
+            console.log msg
+            msg.send "Signing up unsuccessful :cry:, you can manually sign up here: #{signUpURL}; debug: Tried to sign up with #{name}, #{email}, #{phone}"
       catch err
         msg.send err
 
@@ -37,7 +38,7 @@ getForm = (cb) ->
     return
   ).on('response', (response) ->
     if response.statusCode != 200
-      cb('Expected status 200 from Google, received ' + response.statusCode, false)
+      cb("Expected status 200 from Google, received #{response.statusCode}", false)
     return
   ).on('data', (data) ->
     body += data
@@ -54,7 +55,7 @@ sendResponse = (url, formFields, cb) ->
     return
   ).on('response', (response) ->
     if response.statusCode != 200
-      cb('Expected status 200 from Google, received ' + response.statusCode, false)
+      cb("Expected status 200 from Google, received #{response.statusCode}", false)
     return
   ).on('data', (data) ->
     body += data
