@@ -5,7 +5,7 @@
 #   hubot lecture <phonenumber> - Signs you up for the next WISV CH lecture with request code/phonenumber
 
 module.exports = (robot) ->
-  robot.respond /(lecture)[\s]+(?:me[\s]+)?(.*)/i, (msg) ->
+  robot.respond /lecture[\s]+(?:me[\s]+)?(.*)/i, (msg) ->
     message = msg.message
     if !message.user?
       msg.send 'Can\'t find your user details :cry:, you can manually sign up here: https://wisv.ch/lecture'
