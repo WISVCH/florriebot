@@ -5,6 +5,7 @@
   "author": "mark",
   "description": "Florrie <3",
   "dependencies": {
+    "cron": "1.0.9",
     "hubot": "~2.13.2",
     "hubot-diagnostics": "0.0.1",
     "hubot-fliptable": "^1.2.0",
