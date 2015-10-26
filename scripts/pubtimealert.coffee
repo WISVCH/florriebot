@@ -20,9 +20,9 @@ module.exports = (robot) ->
     unless chueURL?
       robot.logger.error "Missing HUBOT_CHUE_URL in environment"
       return
-    gohome = new cronJob PUB_TIME,
+    pubtime = new cronJob PUB_TIME,
         ->
-            robot.messageRoom ROOM, "De /Pub is weer open! :beers:"
+            robot.messageRoom ROOM, "The /Pub is open! Have a beer! :beers:"
             #implement the CHue strobe here....
             robot.http("#{chueURL}strobe/#{lamp}" + duration)
         null
