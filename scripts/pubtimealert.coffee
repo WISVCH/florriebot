@@ -25,8 +25,9 @@ module.exports = (robot) ->
   pubtime = new cronJob PUB_TIME,
     ->
       robot.messageRoom ROOM, "The /Pub is open! Have a beer! 🍻"
-      robot.http("#{chueURL}strobe/#{lamp}?duration=#{duration}")
-        .get()
+      if robot.adapterName == 'slack'
+        robot.http("#{chueURL}alert/#{lamp}?timeout=#{duration}")
+          .get()
     null
     true
     TIMEZONE
