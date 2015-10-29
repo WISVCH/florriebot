@@ -24,7 +24,7 @@ module.exports = (robot) ->
 
   pubtime = new cronJob PUB_TIME,
     ->
-      robot.messageRoom ROOM, "The /Pub is open! Have a beer! :beers:"
+      robot.messageRoom ROOM, "The /Pub is open! Have a beer! 🍻"
       robot.http("#{chueURL}strobe/#{lamp}?duration=#{duration}")
         .get()
     null
