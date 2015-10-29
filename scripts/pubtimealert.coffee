@@ -7,7 +7,7 @@ TIMEZONE = "Europe/Amsterdam"
 #I don't know the pattern for only wednesday and friday...
 PUB_TIME = '00 00 16 * * 3-5' # W-F 4pm
 lamp = "all"
-duration = 1000
+duration = 5000
 
 cronJob = require('cron').CronJob
 
@@ -24,9 +24,10 @@ module.exports = (robot) ->
 
   pubtime = new cronJob PUB_TIME,
     ->
-      robot.messageRoom ROOM, "The /Pub is open! Have a beer! :beers:"
-      #implement the CHue strobe here....
-      robot.http("#{chueURL}strobe/#{lamp}" + duration)
+      robot.messageRoom ROOM, "The /Pub is open! Have a beer! 🍻"
+      if robot.adapterName == 'slack'
+        robot.http("#{chueURL}alert/#{lamp}?timeout=#{duration}")
+          .get()
     null
     true
     TIMEZONE
