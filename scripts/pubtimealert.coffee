@@ -26,7 +26,7 @@ module.exports = (robot) ->
       robot.messageRoom ROOM, "The /Pub is open! Have a beer! 🍻"
       if robot.adapterName == 'slack'
         robot.http("#{chueURL}alert?timeout=#{duration}")
-          .get()
+          .get() (err, res, body) ->
     null
     true
     TIMEZONE
