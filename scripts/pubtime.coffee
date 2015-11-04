@@ -21,7 +21,7 @@ module.exports = (robot) ->
       else
         hours = Math.floor(timeLeft / 60 / 60)
         minutes = Math.floor(timeLeft / 60) - hours * 60
-        seconds = timeLeft - hours * 3600 - minutes * 60
+        seconds = Math.round(timeLeft - hours * 3600 - minutes * 60)
 
         hourString = hours + " " + `((hours == 1) ? "hour" : "hours")`
         minuteString = minutes + " " + `((minutes == 1) ? "minute" : "minutes")`
