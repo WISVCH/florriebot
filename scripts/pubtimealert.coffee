@@ -4,9 +4,8 @@
 # Commands:
 
 TIMEZONE = "Europe/Amsterdam"
-#I don't know the pattern for only wednesday and friday...
-PUB_TIME = '00 00 16 * * 3-5' # W-F 4pm
-duration = 5000
+PUB_TIME = "00 00 16 * * 3-5" # Wed-Fri 16:00
+DURATION = 10000
 
 cronJob = require('cron').CronJob
 
@@ -25,7 +24,7 @@ module.exports = (robot) ->
     ->
       robot.messageRoom ROOM, "The /Pub is open! Have a beer! 🍻"
       if robot.adapterName == 'slack'
-        robot.http("#{chueURL}alert?timeout=#{duration}")
+        robot.http("#{chueURL}alert?timeout=#{DURATION}")
           .get() (err, res, body) ->
     null
     true
