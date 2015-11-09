@@ -18,9 +18,9 @@ module.exports = (robot) ->
     robot.logger.error "Missing HUBOT_CHUE_URL in environment"
     return
 
-  robot.respond /chue alert ?(\d)? ?(.*)?/i, (msg) ->
+  robot.respond /chue alert\s+(\d+)\s+(\d+)|chue alert\s+(\d+)|chue alert/i, (msg) ->
     lamp = if msg.match[1] is undefined then "all" else msg.match[1]
-    timeout = if msg.match[2] is undefined then 5502 else msg.match[2]
+    timeout = msg.match[2] || msg.match[3] || 5502
     robot.http("#{chueURL}alert?timeout=#{timeout}")
         .get() (err, res, body) ->
             msg.emote "Blinking hue lamps at CH"
