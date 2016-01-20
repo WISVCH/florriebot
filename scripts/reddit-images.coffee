@@ -17,7 +17,7 @@ meta = {
 }
 
 timeout = 24 * 60 * 60 * 1000   # 1 day
-imgurRegex = /https?:\/\/(?:www\.)?(?:i\.)?imgur\.com\/(.*?)(?:[#\/\.].*|$)/i
+imgurRegex = /https?:\/\/(?:www\.)?(?:i\.)?imgur\.com\/(.*)(?:[#\/\.].*|$)/i
 
 module.exports = (robot) ->
   robot.respond /(?:superb[\s]*)?(?:owl)(?:[\s]+me)?/i, (msg) ->
@@ -40,8 +40,11 @@ getImage = (msg, subreddit) ->
   ).map((item) ->
     match = item.data.url.match imgurRegex
     if match != null
-      return match[1]
+      if match[1].match(/\./) == null
+        return match[1] + '.gifv'
+      else
+        return match[1].replace /\.gif$/i, '.gifv'
     return null   # should be impossible
   )
   if image != null
-    msg.send 'https://i.imgur.com/' + image + '.gifv'
+    msg.send 'https://i.imgur.com/' + image
