@@ -4,6 +4,7 @@
 # Commands:
 #   hubot owl - Returns a superb owl
 #   hubot boob(s) (me) - Returns me some boobs! NSFW of course.
+#   hubot /r/<subreddit> - Return a "hot" image from the given reddit.com subreddit
 
 meta = {
   "lastRefresh": {
@@ -24,8 +25,14 @@ module.exports = (robot) ->
     getImage(msg, 'superbowl')
   robot.respond /(?:boob(s?))(?:[\s]+me)?/i, (msg) ->
     getImage(msg, 'boobs')
+  robot.respond /\/?r\/([A-Za-z0-9][A-Za-z0-9_]{2,20})/i, (msg) ->
+    getImage(msg, msg.match[1])
 
 getImage = (msg, subreddit) ->
+  if meta.lastRefresh[subreddit] == undefined
+    meta.lastRefresh[subreddit] = 0
+    meta.data[subreddit] = null
+
   if meta.lastRefresh[subreddit] + timeout < Date.now()
     msg.http('https://api.reddit.com/r/' + subreddit)
       .get() (err, res, body) ->
@@ -46,5 +53,5 @@ getImage = (msg, subreddit) ->
         return match[1].replace /\.gif$/i, '.gifv'
     return null   # should be impossible
   )
-  if image != null
+  if image?
     msg.send 'https://i.imgur.com/' + image
