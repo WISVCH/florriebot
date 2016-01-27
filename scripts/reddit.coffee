@@ -4,7 +4,7 @@
 # Commands:
 #   hubot owl - Returns a superb owl
 #   hubot boob(s) (me) - Returns me some boobs! NSFW of course.
-#   hubot /r/<subreddit> - Return a "hot" image from the given reddit.com subreddit
+#   hubot /r/<subreddit> - Return a "hot" image/video/selfpost from the given reddit.com subreddit
 
 request = require('request')
 
