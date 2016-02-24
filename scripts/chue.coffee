@@ -23,7 +23,10 @@ module.exports = (robot) ->
     timeout = msg.match[2] || msg.match[3] || 5502
     robot.http("#{chueURL}alert?timeout=#{timeout}")
         .get() (err, res, body) ->
-            msg.emote "Blinking hue lamps at CH"
+            if res.statusCode == 200
+              msg.emote "Blinking hue lamps at CH"
+            else
+              msg.emote "Sorry... " + body
 
   robot.respond /chue random ?(\d)?/i, (msg) ->
     lamp = if msg.match[1] is undefined then "all" else msg.match[1]
@@ -31,19 +34,27 @@ module.exports = (robot) ->
         .get() (err, res, body) ->
             if res.statusCode == 200
               msg.emote body
+            else
+              msg.emote "Sorry... " + body
 
   robot.respond /chue colou?rloop ?(\d)?/i, (msg) ->
     lamp = if msg.match[1] is undefined then "all" else msg.match[1]
     robot.http("#{chueURL}colorloop/#{lamp}")
         .get() (err, res, body) ->
-            msg.emote "Put on a colourloop at CH"
-            
+            if res.statusCode == 200
+              msg.emote "Put on a colourloop at CH"
+            else
+              msg.emote "Sorry... " + body
+
   robot.respond /chue strobe ?(\d+)*/i, (msg) ->
     lamp = "all"
     duration = if msg.match[1] is undefined then "" else "?duration=" + msg.match[1]
     robot.http("#{chueURL}strobe/#{lamp}" + duration)
         .get() (err, res, body) ->
-            msg.emote "Flashed for every one at CH"
+            if res.statusCode == 200
+              msg.emote "Flashed for every one at CH"
+            else
+              msg.emote "Sorry... " + body
 
   robot.respond /chue colou?r (\d)? ?#?(.*)/i, (msg) ->
     lamp = if msg.match[1] is undefined then "all" else msg.match[1]
@@ -53,8 +64,13 @@ module.exports = (robot) ->
         .get() (err, res, body) ->
             if res.statusCode == 200
               msg.emote body
+            else
+              msg.emote "Sorry... " + body
 
   robot.respond /bvoranje/i, (msg) ->
     robot.http("#{chueURL}oranje")
         .get() (err, res, body) ->
-            msg.emote ":owl:"
+            if res.statusCode == 200
+              msg.emote ":owl:"
+            else
+              msg.emote "Sorry... " + body
