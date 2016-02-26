@@ -7,7 +7,7 @@
   "dependencies": {
     "cron": "1.1.0",
     "hubot": "~2.18.0",
-    "hubot-ascii-art": "^1.1.0",
+    "hubot-ascii-art": "^1.1.1",
     "hubot-diagnostics": "0.0.1",
     "hubot-fliptable": "^1.2.0",
     "hubot-google-images": "~0.2.2",
