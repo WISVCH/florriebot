@@ -6,7 +6,6 @@
 #   hubot chue colour [<lamp>] #<hex> - Change hue lamp <lamp> (or all) to colour <hex>
 #   hubot chue colourloop [<lamp>] - Set hue lamps on colourloop
 #   hubot chue random [<lamp>] - Change hue lamps to a random colour
-#   hubot chue strobe [<lamp>] [<timeout>] - Strobe hue lamps for <timeout> milliseconds
 #   hubot bvoranje - B'voranje :owl:
 #
 # Configuration:
@@ -42,15 +41,6 @@ module.exports = (robot) ->
         .get() (err, res, body) ->
             if res.statusCode == 200
               msg.emote "Put on a colourloop at CH"
-            else
-              msg.emote "Sorry... " + body
-
-  robot.respond /chue strobe ?(\d+)*/i, (msg) ->
-    duration = if msg.match[1] is undefined then "" else "?duration=" + msg.match[1]
-    robot.http("#{chueURL}strobe" + duration)
-        .get() (err, res, body) ->
-            if res.statusCode == 200
-              msg.emote "Flashed for every one at CH"
             else
               msg.emote "Sorry... " + body
 
