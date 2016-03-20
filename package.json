@@ -28,6 +28,7 @@
     "hubot-slack": "~3.4.1",
     "hubot-spotify-me": "~1.0.1",
     "hubot-youtube": "~1.0.0",
+    "octonode": "^0.7.5",
     "request": "^2.65.0"
   },
   "engines": {
