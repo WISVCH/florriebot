@@ -42,5 +42,5 @@ module.exports = (robot) ->
           if err
             response.reply "Something went wrong while communicating with GitHub, sorry #{response.message.user.name}!"
           else
-            response.reply "Thanks, #{response.message.user.name}, I created an issue for you: #{issue.title}"
+            response.reply "Thanks #{response.message.user.name}, I created an issue for you: #{response.match.title}"
   )
