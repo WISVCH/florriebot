@@ -27,10 +27,13 @@ module.exports = (robot) ->
 
       # Match the raw text for now. Note that this only works for slack
       match = message.rawText?.match /^(?:<!subteam\^[A-Z0-9]{9}\|)@(pccom|beheer)> issue (?:me )?(.*)/i
+
+      # some clients contain an e-mail address, use that if present
+      nameText = if message.user.email_address then "[#{message.user.name}](#{message.user.email_address})" else message.user.name
       if match
         issue =
           title: match[2],
-          body: "Issue added by #{message.user.name}"
+          body: "Issue added by #{nameText}"
           labels: ['slack', match[1]]
       else
         false
