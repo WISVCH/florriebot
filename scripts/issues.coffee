@@ -21,7 +21,12 @@ module.exports = (robot) ->
     return
   robot.listen(
     (message) ->
-      match = message.text?.match /^@(pccom|beheer) issue (?:me )?(.*)/i
+      # The following fails due to a bug in the hubot-slack adapter
+      # See https://github.com/slackhq/hubot-slack/issues/288
+      #match = message.text?.match /^@(pccom|beheer) issue (?:me )?(.*)/i
+
+      # Match the raw text for now. Note that this only works for slack
+      match = message.rawText?.match /^(?:<!subteam\^[A-Z0-9]{9}\|)@(pccom|beheer)> issue (?:me )?(.*)/i
       if match
         issue =
           title: match[2],
