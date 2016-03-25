@@ -29,7 +29,7 @@ module.exports = (robot) ->
       match = message.rawText?.match /^(?:<!subteam\^[A-Z0-9]{9}\|)@(pccom|beheer)> issue (?:me )?(.*)/i
 
       # some clients contain an e-mail address, use that if present
-      nameText = if message.user.email_address then "[#{message.user.name}](#{message.user.email_address})" else message.user.name
+      nameText = if message.user.email_address then "[#{message.user.name}](mailto:#{message.user.email_address})" else message.user.name
       if match
         issue =
           title: match[2],
