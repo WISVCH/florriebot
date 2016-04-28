@@ -21,7 +21,7 @@ meta = {
 }
 
 timeout = 24 * 60 * 60 * 1000   # 1 day
-imgurRegex = /https?:\/\/(?:www\.)?(?:i\.)?imgur\.com\/([^\.]*)(?:[\?#\/\.].*$)/i
+imgurRegex = /https?:\/\/(?:www\.)?(?:i\.)?imgur\.com\/([^\.]*)(?:[\?#\/\.].*$)?/i
 youtubeRegex = /http:\/\/(?:www\.)?youtu(?:be\.com\/watch\?v=|\.be\/)([\w\-]+)(&(amp;)?[\w\?=]*)?/i
 
 module.exports = (robot) ->
