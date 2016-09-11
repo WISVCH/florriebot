@@ -16,7 +16,7 @@
     "hubot-highfive": "^1.0.4",
     "hubot-irc": "~0.2.7",
     "hubot-maps": "0.0.2",
-    "hubot-pandapanda": "jabbink/hubot-pandapanda",
+    "hubot-pandapanda": "^0.9.3",
     "hubot-plusplus-improved": "~1.2.6",
     "hubot-pokedex": "0.0.4",
     "hubot-pugme": "~0.1.0",
