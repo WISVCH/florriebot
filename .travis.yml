@@ -1,7 +1,16 @@
+sudo: required
+dist: trusty
+services:
+- docker
 language: node_js
-node_js:
-- '5.0'
-- '4.2'
+node_js: "4"
+script:
+- docker build --no-cache --pull -t wisvch/florriebot:$TRAVIS_BUILD_NUMBER .
+after_success:
+- if [ "${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH}" == "master" ]; then
+  docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+  docker push wisvch/florriebot:$TRAVIS_BUILD_NUMBER;
+  fi
 notifications:
   slack:
     secure: jDeFTiem0CoX4qCmbZT0R3GRXEEQsGOWEKGc06rEWtcLJD3sBpG75i4F+YcYwlOCBa+ls3H2dQsCU2p+lWXQ4DzTay6gZ1jYkbKS1ndD6sDbRo7I3I83oJvO2o6Ff/bZqsnpNr5JCzXs1mVP4cDCbvhvBDJ4ECW+MCTnxOjGBsbuJw4YAmISMZCTA+YxBSjmYZyilve1gLxmiqlZJeq84b4kkIciKN0KDgPbzD4xCbLqUV2Nd/13luqSUyiDDxICy0QcR3jBtERt+rS/p8eIFshxLi65Y5SVcPl34dx2mD5gTyF5d4kS6lcPDW8mxuTw4bYhbYinIUEe9rbH9ba/BhkNeEOZ+dPA07FE/943c0WwHmirXF3OdNQ0Q0aYGeYn1Yef/C+dTzXpeF8AJWfqxrmeHlOOc4QS6HMN0vfKr8lPyJV4ceiMb4xuUM3Q7ZH4fYtBiZkUvBdk5VmFEv740GItYml0zRYqBUuCPSMzR/8dUrtIQ0rr/c5yKZcj6bt7/+AydXvZlovfsYHumqMpqHEDG19mXdkbIKghLH/TnqS+AlALTEzM1y9TQBvLvWVWSk1D3lzCp8x532gn5l3pgQU5/lDzaEwulhcTqPoVo2yd0QfhqhYxKrjLvwKgSbZYwVgOu/3TDlmAOYXBK+v3bSGnwID+Op94ol98AHa1AJ0=
