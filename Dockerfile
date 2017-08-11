@@ -1,5 +1,4 @@
 FROM wisvch/debian:stretch
-MAINTAINER Mark Janssen <mark@praseodym.net>
 
 RUN apt-get update && apt-get install -y nodejs nodejs-legacy && rm -rf /var/lib/apt/lists/*
 ADD . /srv/florriebot
