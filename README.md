@@ -174,7 +174,7 @@ hubot onto Windows][deploy-windows] wiki pages.
 
 ### Docker
 
-A pre-built Docker image is available at https://bintray.com/wisvch/registry/florriebot.
+A pre-built Docker image is available at https://hub.docker.com/r/wisvch/florriebot/.
 
 To build your own Docker image, first create a tarball of the repository including all npm dependencies:
 
@@ -190,3 +190,11 @@ Then build the Docker image:
 ```bash
 docker build - < florriebot.tar.gz
 ```
+
+You can then interact with Florrie in the Docker container with:
+
+```
+docker run -it <image> bash
+bin/hubot
+```
+(Note `<image>` is the hash shown at the end of the `docker build` command)
