@@ -1,7 +1,11 @@
-FROM wisvch/debian:stretch
+FROM node:8
 
-RUN apt-get update && apt-get install -y gnupg
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN apt-get update && \
+    apt-get dist-upgrade -y && \
+    apt-get install -y --no-install-recommends curl ca-certificates
+RUN curl -so /usr/local/share/ca-certificates/wisvch.crt https://ch.tudelft.nl/certs/wisvch.crt && \
+    chmod 644 /usr/local/share/ca-certificates/wisvch.crt && \
+    update-ca-certificates
 RUN apt-get update && apt-get install -y nodejs && rm -rf /var/lib/apt/lists/*
 ADD . /srv/florriebot
 
