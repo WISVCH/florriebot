@@ -16,5 +16,9 @@
   "hubot-plusplus-improved",
   "hubot-pokedex",
   "hubot-highfive",
-  "hubot-ascii-art"
+  "hubot-ascii-art",
+  "hubot-xkcd",
+  "hubot-giphy",
+  "hubot-applause",
+  "hubot-lmgtfy"
 ]
