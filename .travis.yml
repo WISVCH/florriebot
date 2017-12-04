@@ -3,7 +3,10 @@ dist: trusty
 services:
 - docker
 language: node_js
-node_js: "4"
+node_js: "8"
+before_script:
+  # Solution per https://github.com/yarnpkg/yarn/issues/686#issuecomment-318215427
+  - ssh-add -K
 script:
 - docker build --no-cache --pull -t wisvch/florriebot:$TRAVIS_BUILD_NUMBER .
 after_success:
