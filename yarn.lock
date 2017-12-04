@@ -680,13 +680,13 @@ https-proxy-agent@^1.0.0:
     debug "2"
     extend "3"
 
-"hubot-applause@git+ssh://git@github.com:wisvch/hubot-applause.git":
+"hubot-applause@https://github.com/WISVCH/hubot-applause.git#920ea49f751f0d4a826636e109dc9f113b4a0cc7":
   version "1.0.0"
-  resolved "git+ssh://git@github.com:wisvch/hubot-applause.git#920ea49f751f0d4a826636e109dc9f113b4a0cc7"
+  resolved "https://github.com/WISVCH/hubot-applause.git#920ea49f751f0d4a826636e109dc9f113b4a0cc7"
 
-"hubot-ascii-art@git+ssh://git@github.com:wisvch/hubot-ascii-art.git":
+"hubot-ascii-art@https://github.com/WISVCH/hubot-ascii-art.git#dcbc5ce8ce17db1f26d14ec94003a15372e35fea":
   version "1.1.1"
-  resolved "git+ssh://git@github.com:wisvch/hubot-ascii-art.git#dcbc5ce8ce17db1f26d14ec94003a15372e35fea"
+  resolved "https://github.com/WISVCH/hubot-ascii-art.git#dcbc5ce8ce17db1f26d14ec94003a15372e35fea"
   dependencies:
     figlet "^1.1.1"
 
@@ -694,31 +694,31 @@ hubot-diagnostics@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/hubot-diagnostics/-/hubot-diagnostics-1.0.0.tgz#3a20de525901b83924b523b1244dcb726a8def69"
 
-"hubot-fliptable@git+ssh://git@github.com:wisvch/hubot-fliptable.git":
+"hubot-fliptable@https://github.com/WISVCH/hubot-fliptable.git#461276f26fcdc1bb59915783de5813ea74ec4569":
   version "1.1.0"
-  resolved "git+ssh://git@github.com:wisvch/hubot-fliptable.git#461276f26fcdc1bb59915783de5813ea74ec4569"
+  resolved "https://github.com/WISVCH/hubot-fliptable.git#461276f26fcdc1bb59915783de5813ea74ec4569"
 
-"hubot-giphy@git+ssh://git@github.com:wisvch/hubot-giphy.git":
+"hubot-giphy@https://github.com/WISVCH/hubot-giphy.git#aae5bcad0dcbb20b35ef116b4c6f83d1c5c37456":
   version "0.6.1"
-  resolved "git+ssh://git@github.com:wisvch/hubot-giphy.git#aae5bcad0dcbb20b35ef116b4c6f83d1c5c37456"
+  resolved "https://github.com/WISVCH/hubot-giphy.git#aae5bcad0dcbb20b35ef116b4c6f83d1c5c37456"
   dependencies:
     giphy-api "^1.1.15"
 
-"hubot-google-images@git+ssh://git@github.com:wisvch/hubot-google-images.git":
+"hubot-google-images@https://github.com/WISVCH/hubot-google-images.git#957f5f5f5f6841f77233f2e47c2d908da0429490":
   version "0.2.7"
-  resolved "git+ssh://git@github.com:wisvch/hubot-google-images.git#957f5f5f5f6841f77233f2e47c2d908da0429490"
+  resolved "https://github.com/WISVCH/hubot-google-images.git#957f5f5f5f6841f77233f2e47c2d908da0429490"
 
-"hubot-google-translate@git+ssh://git@github.com:wisvch/hubot-google-translate.git":
+"hubot-google-translate@https://github.com/WISVCH/hubot-google-translate.git#913d6542669fb949f5910e83239f02e6cab84e3c":
   version "0.2.1"
-  resolved "git+ssh://git@github.com:wisvch/hubot-google-translate.git#913d6542669fb949f5910e83239f02e6cab84e3c"
+  resolved "https://github.com/WISVCH/hubot-google-translate.git#913d6542669fb949f5910e83239f02e6cab84e3c"
 
 hubot-help@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hubot-help/-/hubot-help-1.0.1.tgz#0a678e551d67c4317e222ff294b9583b8322fce7"
 
-"hubot-highfive@git+ssh://git@github.com:wisvch/hubot-highfive.git":
+"hubot-highfive@https://github.com/WISVCH/hubot-highfive.git#46124901ee8af057a4ac69e9d94b2001025c238c":
   version "1.0.4"
-  resolved "git+ssh://git@github.com:wisvch/hubot-highfive.git#46124901ee8af057a4ac69e9d94b2001025c238c"
+  resolved "https://github.com/WISVCH/hubot-highfive.git#46124901ee8af057a4ac69e9d94b2001025c238c"
   dependencies:
     coffee-script "~1.6"
 
@@ -729,39 +729,39 @@ hubot-irc@^0.2.9:
     irc "^0.5.0"
     log "1.4.0"
 
-"hubot-lmgtfy@git+ssh://git@github.com:wisvch/hubot-lmgtfy.git":
+"hubot-lmgtfy@https://github.com/WISVCH/hubot-lmgtfy.git#9f9be870cced0f50a2774d978bae7331689a9834":
   version "0.1.1"
-  resolved "git+ssh://git@github.com:wisvch/hubot-lmgtfy.git#9f9be870cced0f50a2774d978bae7331689a9834"
+  resolved "https://github.com/WISVCH/hubot-lmgtfy.git#9f9be870cced0f50a2774d978bae7331689a9834"
 
-"hubot-maps@git+ssh://git@github.com:wisvch/hubot-maps.git":
+"hubot-maps@https://github.com/WISVCH/hubot-maps.git#bc4b1fc394b32df46488d1e9068005288802ae86":
   version "0.0.3"
-  resolved "git+ssh://git@github.com:wisvch/hubot-maps.git#bc4b1fc394b32df46488d1e9068005288802ae86"
+  resolved "https://github.com/WISVCH/hubot-maps.git#bc4b1fc394b32df46488d1e9068005288802ae86"
 
-"hubot-pandapanda@git+ssh://git@github.com:wisvch/hubot-pandapanda.git":
+"hubot-pandapanda@https://github.com/WISVCH/hubot-pandapanda.git#a4129e5bc8d96dd1fb345080e424eaef5ad103f0":
   version "0.9.3"
-  resolved "git+ssh://git@github.com:wisvch/hubot-pandapanda.git#a4129e5bc8d96dd1fb345080e424eaef5ad103f0"
+  resolved "https://github.com/WISVCH/hubot-pandapanda.git#a4129e5bc8d96dd1fb345080e424eaef5ad103f0"
 
-"hubot-plusplus-improved@git+ssh://git@github.com:wisvch/hubot-plusplus-improved.git":
+"hubot-plusplus-improved@https://github.com/WISVCH/hubot-plusplus-improved.git#716a68470e449bb2ba33d57641d5612a21408eba":
   version "1.2.6"
-  resolved "git+ssh://git@github.com:wisvch/hubot-plusplus-improved.git#716a68470e449bb2ba33d57641d5612a21408eba"
+  resolved "https://github.com/WISVCH/hubot-plusplus-improved.git#716a68470e449bb2ba33d57641d5612a21408eba"
   dependencies:
     clark "0.0.6"
     coffee-script "~1.6"
     underscore ">= 1.0"
 
-"hubot-pokedex@git+ssh://git@github.com:wisvch/hubot-pokedex.git":
+"hubot-pokedex@https://github.com/WISVCH/hubot-pokedex.git#c3853d09e2cf62c631685f5fc6c71e9ace75dba0":
   version "0.0.4"
-  resolved "git+ssh://git@github.com:wisvch/hubot-pokedex.git#c3853d09e2cf62c631685f5fc6c71e9ace75dba0"
+  resolved "https://github.com/WISVCH/hubot-pokedex.git#c3853d09e2cf62c631685f5fc6c71e9ace75dba0"
   dependencies:
     coffee-script "~1.6"
 
-"hubot-pugme@git+ssh://git@github.com:wisvch/hubot-pugme.git":
+"hubot-pugme@https://github.com/WISVCH/hubot-pugme.git#e35a816c69a297f02d457bb79502ae7167b91001":
   version "0.1.1"
-  resolved "git+ssh://git@github.com:wisvch/hubot-pugme.git#e35a816c69a297f02d457bb79502ae7167b91001"
+  resolved "https://github.com/WISVCH/hubot-pugme.git#e35a816c69a297f02d457bb79502ae7167b91001"
 
-"hubot-pugsofwesteros@git+ssh://git@github.com:wisvch/hubot-pugsofwesteros.git":
+"hubot-pugsofwesteros@https://github.com/WISVCH/hubot-pugsofwesteros.git#e9c6ce5f18244e2daa1e38f36ea4d5826eaf23a0":
   version "1.0.4"
-  resolved "git+ssh://git@github.com:wisvch/hubot-pugsofwesteros.git#e9c6ce5f18244e2daa1e38f36ea4d5826eaf23a0"
+  resolved "https://github.com/WISVCH/hubot-pugsofwesteros.git#e9c6ce5f18244e2daa1e38f36ea4d5826eaf23a0"
   dependencies:
     coffee-script "~1.6"
 
@@ -775,9 +775,9 @@ hubot-rules@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/hubot-rules/-/hubot-rules-1.0.0.tgz#35a5d0acd27a3fa873e796ba29f0928f2eb8398c"
 
-"hubot-shipit@git+ssh://git@github.com:wisvch/hubot-shipit.git":
+"hubot-shipit@https://github.com/WISVCH/hubot-shipit.git#d0c7eec37a58adcd181bf0488284d087925a8ba9":
   version "0.2.1"
-  resolved "git+ssh://git@github.com:wisvch/hubot-shipit.git#d0c7eec37a58adcd181bf0488284d087925a8ba9"
+  resolved "https://github.com/WISVCH/hubot-shipit.git#d0c7eec37a58adcd181bf0488284d087925a8ba9"
 
 hubot-slack@^4.4.0:
   version "4.4.0"
@@ -786,19 +786,19 @@ hubot-slack@^4.4.0:
     "@slack/client" "^3.4.0"
     lodash "^3.10.1"
 
-"hubot-spotify-me@git+ssh://git@github.com:wisvch/hubot-spotify-me.git":
+"hubot-spotify-me@https://github.com/WISVCH/hubot-spotify-me.git#79e7e1a8d38a338554429f0fd80b052f0873922f":
   version "1.0.1"
-  resolved "git+ssh://git@github.com:wisvch/hubot-spotify-me.git#79e7e1a8d38a338554429f0fd80b052f0873922f"
+  resolved "https://github.com/WISVCH/hubot-spotify-me.git#79e7e1a8d38a338554429f0fd80b052f0873922f"
   dependencies:
     coffee-script "~1.9"
 
-"hubot-xkcd@git+ssh://git@github.com:wisvch/hubot-xkcd.git":
+"hubot-xkcd@https://github.com/WISVCH/hubot-xkcd.git#59705890de181af6b2d3dc0e3659cf55546e9b76":
   version "0.0.4"
-  resolved "git+ssh://git@github.com:wisvch/hubot-xkcd.git#59705890de181af6b2d3dc0e3659cf55546e9b76"
+  resolved "https://github.com/WISVCH/hubot-xkcd.git#59705890de181af6b2d3dc0e3659cf55546e9b76"
 
-"hubot-youtube@git+ssh://git@github.com:wisvch/hubot-youtube.git":
+"hubot-youtube@https://github.com/WISVCH/hubot-youtube.git#dab463a389a49faf5e1005195adfc9064a432aed":
   version "1.0.2"
-  resolved "git+ssh://git@github.com:wisvch/hubot-youtube.git#dab463a389a49faf5e1005195adfc9064a432aed"
+  resolved "https://github.com/WISVCH/hubot-youtube.git#dab463a389a49faf5e1005195adfc9064a432aed"
 
 hubot@^3.0.1:
   version "3.0.1"
