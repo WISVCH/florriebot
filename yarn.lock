@@ -680,9 +680,9 @@ https-proxy-agent@^1.0.0:
     debug "2"
     extend "3"
 
-"hubot-applause@https://github.com/WISVCH/hubot-applause.git#920ea49f751f0d4a826636e109dc9f113b4a0cc7":
+hubot-applause@^1.0.0:
   version "1.0.0"
-  resolved "https://github.com/WISVCH/hubot-applause.git#920ea49f751f0d4a826636e109dc9f113b4a0cc7"
+  resolved "https://registry.yarnpkg.com/hubot-applause/-/hubot-applause-1.0.0.tgz#d7e05f426400f0e568a36f5220d467307b373f32"
 
 "hubot-ascii-art@https://github.com/WISVCH/hubot-ascii-art.git#dcbc5ce8ce17db1f26d14ec94003a15372e35fea":
   version "1.1.1"
@@ -759,9 +759,9 @@ hubot-irc@^0.2.9:
   version "0.1.1"
   resolved "https://github.com/WISVCH/hubot-pugme.git#e35a816c69a297f02d457bb79502ae7167b91001"
 
-"hubot-pugsofwesteros@https://github.com/WISVCH/hubot-pugsofwesteros.git#e9c6ce5f18244e2daa1e38f36ea4d5826eaf23a0":
-  version "1.0.4"
-  resolved "https://github.com/WISVCH/hubot-pugsofwesteros.git#e9c6ce5f18244e2daa1e38f36ea4d5826eaf23a0"
+hubot-pugsofwesteros@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/hubot-pugsofwesteros/-/hubot-pugsofwesteros-1.1.0.tgz#32bad465232d7d4067e6d9a29027171394e6d964"
   dependencies:
     coffee-script "~1.6"
 
@@ -792,9 +792,9 @@ hubot-slack@^4.4.0:
   dependencies:
     coffee-script "~1.9"
 
-"hubot-xkcd@https://github.com/WISVCH/hubot-xkcd.git#59705890de181af6b2d3dc0e3659cf55546e9b76":
-  version "0.0.4"
-  resolved "https://github.com/WISVCH/hubot-xkcd.git#59705890de181af6b2d3dc0e3659cf55546e9b76"
+hubot-xkcd@~0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/hubot-xkcd/-/hubot-xkcd-0.0.5.tgz#7da84b3b190aacdbb473f04d967636cb60be54a0"
 
 "hubot-youtube@https://github.com/WISVCH/hubot-youtube.git#dab463a389a49faf5e1005195adfc9064a432aed":
   version "1.0.2"
