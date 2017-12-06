@@ -694,9 +694,9 @@ hubot-diagnostics@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/hubot-diagnostics/-/hubot-diagnostics-1.0.0.tgz#3a20de525901b83924b523b1244dcb726a8def69"
 
-"hubot-fliptable@https://github.com/WISVCH/hubot-fliptable.git#461276f26fcdc1bb59915783de5813ea74ec4569":
-  version "1.1.0"
-  resolved "https://github.com/WISVCH/hubot-fliptable.git#461276f26fcdc1bb59915783de5813ea74ec4569"
+hubot-fliptable@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/hubot-fliptable/-/hubot-fliptable-2.0.0.tgz#34ccba071993bac61a719fe42feb7a75c6ffbf35"
 
 "hubot-giphy@https://github.com/WISVCH/hubot-giphy.git#aae5bcad0dcbb20b35ef116b4c6f83d1c5c37456":
   version "0.6.1"

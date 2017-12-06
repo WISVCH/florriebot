@@ -10,7 +10,7 @@
     "hubot-applause": "^1.0.0",
     "hubot-ascii-art": "https://github.com/WISVCH/hubot-ascii-art.git#dcbc5ce8ce17db1f26d14ec94003a15372e35fea",
     "hubot-diagnostics": "^1.0.0",
-    "hubot-fliptable": "https://github.com/WISVCH/hubot-fliptable.git#461276f26fcdc1bb59915783de5813ea74ec4569",
+    "hubot-fliptable": "^2.0.0",
     "hubot-giphy": "https://github.com/WISVCH/hubot-giphy.git#aae5bcad0dcbb20b35ef116b4c6f83d1c5c37456",
     "hubot-google-images": "https://github.com/WISVCH/hubot-google-images.git#957f5f5f5f6841f77233f2e47c2d908da0429490",
     "hubot-google-translate": "https://github.com/WISVCH/hubot-google-translate.git#913d6542669fb949f5910e83239f02e6cab84e3c",
