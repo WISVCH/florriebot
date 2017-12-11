@@ -8,7 +8,7 @@
     "cron": "1.1.0",
     "hubot": "^3.0.1",
     "hubot-applause": "^1.0.0",
-    "hubot-ascii-art": "https://github.com/WISVCH/hubot-ascii-art.git#dcbc5ce8ce17db1f26d14ec94003a15372e35fea",
+    "hubot-ascii-art": "^1.1.3",
     "hubot-diagnostics": "^1.0.0",
     "hubot-fliptable": "^2.0.0",
     "hubot-giphy": "https://github.com/WISVCH/hubot-giphy.git#aae5bcad0dcbb20b35ef116b4c6f83d1c5c37456",
