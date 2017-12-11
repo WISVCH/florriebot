@@ -17,7 +17,7 @@
     "hubot-help": "^1.0.1",
     "hubot-highfive": "https://github.com/WISVCH/hubot-highfive.git#46124901ee8af057a4ac69e9d94b2001025c238c",
     "hubot-irc": "^0.2.9",
-    "hubot-lmgtfy": "https://github.com/WISVCH/hubot-lmgtfy.git#9f9be870cced0f50a2774d978bae7331689a9834",
+    "hubot-lmgtfy": "^1.0.0",
     "hubot-maps": "https://github.com/WISVCH/hubot-maps.git#bc4b1fc394b32df46488d1e9068005288802ae86",
     "hubot-pandapanda": "https://github.com/WISVCH/hubot-pandapanda.git#a4129e5bc8d96dd1fb345080e424eaef5ad103f0",
     "hubot-plusplus-improved": "https://github.com/WISVCH/hubot-plusplus-improved.git#716a68470e449bb2ba33d57641d5612a21408eba",

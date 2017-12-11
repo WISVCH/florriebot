@@ -729,9 +729,9 @@ hubot-irc@^0.2.9:
     irc "^0.5.0"
     log "1.4.0"
 
-"hubot-lmgtfy@https://github.com/WISVCH/hubot-lmgtfy.git#9f9be870cced0f50a2774d978bae7331689a9834":
-  version "0.1.1"
-  resolved "https://github.com/WISVCH/hubot-lmgtfy.git#9f9be870cced0f50a2774d978bae7331689a9834"
+hubot-lmgtfy@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/hubot-lmgtfy/-/hubot-lmgtfy-1.0.0.tgz#3074fdf2a1bc2a597d21b690903e47b3badbc936"
 
 "hubot-maps@https://github.com/WISVCH/hubot-maps.git#bc4b1fc394b32df46488d1e9068005288802ae86":
   version "0.0.3"
