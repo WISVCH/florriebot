@@ -30,7 +30,7 @@
     "hubot-slack": "^4.4.0",
     "hubot-spotify-me": "https://github.com/WISVCH/hubot-spotify-me.git#79e7e1a8d38a338554429f0fd80b052f0873922f",
     "hubot-xkcd": "~0.0.5",
-    "hubot-youtube": "https://github.com/WISVCH/hubot-youtube.git#dab463a389a49faf5e1005195adfc9064a432aed",
+    "hubot-youtube": "^1.1.0",
     "ical": "^0.5.0",
     "octonode": "^0.7.5",
     "request": "^2.65.0"

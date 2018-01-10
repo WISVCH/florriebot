@@ -796,9 +796,9 @@ hubot-xkcd@~0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/hubot-xkcd/-/hubot-xkcd-0.0.5.tgz#7da84b3b190aacdbb473f04d967636cb60be54a0"
 
-"hubot-youtube@https://github.com/WISVCH/hubot-youtube.git#dab463a389a49faf5e1005195adfc9064a432aed":
-  version "1.0.2"
-  resolved "https://github.com/WISVCH/hubot-youtube.git#dab463a389a49faf5e1005195adfc9064a432aed"
+hubot-youtube@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/hubot-youtube/-/hubot-youtube-1.1.0.tgz#c1653c1f8d3237b2a5bb64ddaf7bb67f3bd42e87"
 
 hubot@^3.0.1:
   version "3.0.1"
