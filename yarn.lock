@@ -694,19 +694,11 @@ hubot-fliptable@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/hubot-fliptable/-/hubot-fliptable-2.0.0.tgz#34ccba071993bac61a719fe42feb7a75c6ffbf35"
 
-hubot-giphy@0.7.0-rc.2:
-  version "0.7.0-rc.2"
-  resolved "https://registry.yarnpkg.com/hubot-giphy/-/hubot-giphy-0.7.0-rc.2.tgz#a17a0fbbd3eaa9b63d615ce44852f3e9ce473d26"
+hubot-giphy@0.7.0-rc.3:
+  version "0.7.0-rc.3"
+  resolved "https://registry.yarnpkg.com/hubot-giphy/-/hubot-giphy-0.7.0-rc.3.tgz#ff67d6dda7f647ca4e13bc956d59ae4177155487"
   dependencies:
     giphy-api "~1.1.17"
-
-"hubot-google-images@https://github.com/WISVCH/hubot-google-images.git#957f5f5f5f6841f77233f2e47c2d908da0429490":
-  version "0.2.7"
-  resolved "https://github.com/WISVCH/hubot-google-images.git#957f5f5f5f6841f77233f2e47c2d908da0429490"
-
-"hubot-google-translate@https://github.com/WISVCH/hubot-google-translate.git#913d6542669fb949f5910e83239f02e6cab84e3c":
-  version "0.2.1"
-  resolved "https://github.com/WISVCH/hubot-google-translate.git#913d6542669fb949f5910e83239f02e6cab84e3c"
 
 hubot-help@^1.0.1:
   version "1.0.1"
@@ -716,10 +708,6 @@ hubot-lmgtfy@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hubot-lmgtfy/-/hubot-lmgtfy-1.0.1.tgz#d3f2b84895cd04f98452d25c0dc4beb7adff7267"
 
-"hubot-maps@https://github.com/WISVCH/hubot-maps.git#bc4b1fc394b32df46488d1e9068005288802ae86":
-  version "0.0.3"
-  resolved "https://github.com/WISVCH/hubot-maps.git#bc4b1fc394b32df46488d1e9068005288802ae86"
-
 "hubot-plusplus-improved@https://github.com/WISVCH/hubot-plusplus-improved.git#716a68470e449bb2ba33d57641d5612a21408eba":
   version "1.2.6"
   resolved "https://github.com/WISVCH/hubot-plusplus-improved.git#716a68470e449bb2ba33d57641d5612a21408eba"
@@ -727,10 +715,6 @@ hubot-lmgtfy@^1.0.1:
     clark "0.0.6"
     coffee-script "~1.6"
     underscore ">= 1.0"
-
-"hubot-pugme@https://github.com/WISVCH/hubot-pugme.git#e35a816c69a297f02d457bb79502ae7167b91001":
-  version "0.1.1"
-  resolved "https://github.com/WISVCH/hubot-pugme.git#e35a816c69a297f02d457bb79502ae7167b91001"
 
 hubot-pugsofwesteros@^1.1.0:
   version "1.1.0"
@@ -747,10 +731,6 @@ hubot-redis-brain@^1.0.0:
 hubot-rules@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/hubot-rules/-/hubot-rules-1.0.0.tgz#35a5d0acd27a3fa873e796ba29f0928f2eb8398c"
-
-"hubot-shipit@https://github.com/WISVCH/hubot-shipit.git#d0c7eec37a58adcd181bf0488284d087925a8ba9":
-  version "0.2.1"
-  resolved "https://github.com/WISVCH/hubot-shipit.git#d0c7eec37a58adcd181bf0488284d087925a8ba9"
 
 hubot-slack@^4.4.0:
   version "4.4.0"

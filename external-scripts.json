@@ -4,17 +4,12 @@
   "hubot-diagnostics",
   "hubot-fliptable",
   "hubot-giphy",
-  "hubot-google-images",
-  "hubot-google-translate",
   "hubot-help",
   "hubot-lmgtfy",
-  "hubot-maps",
   "hubot-plusplus-improved",
-  "hubot-pugme",
   "hubot-pugsofwesteros",
   "hubot-redis-brain",
   "hubot-rules",
-  "hubot-shipit",
   "hubot-youtube",
   "hubot-xkcd"
 ]
