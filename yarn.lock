@@ -708,12 +708,11 @@ hubot-lmgtfy@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hubot-lmgtfy/-/hubot-lmgtfy-1.0.1.tgz#d3f2b84895cd04f98452d25c0dc4beb7adff7267"
 
-"hubot-plusplus-improved@https://github.com/WISVCH/hubot-plusplus-improved.git#716a68470e449bb2ba33d57641d5612a21408eba":
-  version "1.2.6"
-  resolved "https://github.com/WISVCH/hubot-plusplus-improved.git#716a68470e449bb2ba33d57641d5612a21408eba"
+hubot-plusplus-improved@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/hubot-plusplus-improved/-/hubot-plusplus-improved-1.4.0.tgz#126d8f11be02b863e9fb6f4413ba53ab0ff80cb4"
   dependencies:
     clark "0.0.6"
-    coffee-script "~1.6"
     underscore ">= 1.0"
 
 hubot-pugsofwesteros@^1.1.0:

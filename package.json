@@ -14,7 +14,7 @@
     "hubot-giphy": "0.7.0-rc.3",
     "hubot-help": "^1.0.1",
     "hubot-lmgtfy": "^1.0.1",
-    "hubot-plusplus-improved": "https://github.com/WISVCH/hubot-plusplus-improved.git#716a68470e449bb2ba33d57641d5612a21408eba",
+    "hubot-plusplus-improved": "^1.4.0",
     "hubot-pugsofwesteros": "^1.1.0",
     "hubot-redis-brain": "^1.0.0",
     "hubot-rules": "^1.0.0",
