@@ -4,7 +4,8 @@ ADD https://ch.tudelft.nl/certs/wisvch.crt /usr/local/share/ca-certificates/wisv
 RUN chmod 0644 /usr/local/share/ca-certificates/wisvch.crt && \
     update-ca-certificates
 
-COPY . /srv/florriebot
+WORKDIR /srv/florriebot
+COPY . .
 RUN yarn
 
 ENV HUBOT_NAME florriebot
