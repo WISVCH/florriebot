@@ -3,7 +3,7 @@ dist: trusty
 services:
 - docker
 language: node_js
-node_js: "4"
+node_js: "8"
 script:
 - docker build --no-cache --pull -t wisvch/florriebot:$TRAVIS_BUILD_NUMBER .
 after_success:

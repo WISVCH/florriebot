@@ -1,20 +1,15 @@
 [
+  "hubot-applause",
+  "hubot-ascii-art",
   "hubot-diagnostics",
   "hubot-fliptable",
+  "hubot-giphy",
   "hubot-help",
-  "hubot-google-images",
-  "hubot-google-translate",
-  "hubot-pandapanda",
-  "hubot-pugme",
+  "hubot-lmgtfy",
+  "hubot-plusplus-improved",
   "hubot-pugsofwesteros",
-  "hubot-maps",
   "hubot-redis-brain",
   "hubot-rules",
-  "hubot-shipit",
-  "hubot-spotify-me",
   "hubot-youtube",
-  "hubot-plusplus-improved",
-  "hubot-pokedex",
-  "hubot-highfive",
-  "hubot-ascii-art"
+  "hubot-xkcd"
 ]
