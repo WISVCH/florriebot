@@ -52,7 +52,7 @@ easier way to do this has been implemented.
 
     grep -o 'hubot-[a-z0-9_-]\+' external-scripts.json | \
       xargs -n1 -i sh -c 'sed -n "/^# Configuration/,/^#$/ s/^/{} /p" \
-          $(find node_modules/{}/ -name "*.coffee")' | \
+          $(find node_modules/{}/ -name "*.js")' | \
         awk -F '#' '{ printf "%-25s %s\n", $1, $2 }'
 
 How to set environment variables will be specific to your operating system.
@@ -176,25 +176,15 @@ hubot onto Windows][deploy-windows] wiki pages.
 
 A pre-built Docker image is available at https://hub.docker.com/r/wisvch/florriebot/.
 
-To build your own Docker image, first create a tarball of the repository including all npm dependencies:
+To build locally, run:
 
 ```bash
-nvm install 4
-nvm use 4
-npm install
-tar czf florriebot.tar.gz --exclude=florriebot.tar.gz *
-```
-
-Then build the Docker image:
-
-```bash
-docker build - < florriebot.tar.gz
+docker build -t florrie .
 ```
 
 You can then interact with Florrie in the Docker container with:
 
 ```
-docker run -it <image> bash
+docker run -it florrie bash
 bin/hubot
 ```
-(Note `<image>` is the hash shown at the end of the `docker build` command)
