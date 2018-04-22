@@ -14,7 +14,7 @@ ENV HUBOT_PORT 8080
 EXPOSE ${HUBOT_PORT}
 
 RUN groupadd -r florriebot --gid=999 && useradd --no-log-init -r -g florriebot --uid=999 florriebot
-USER florriebot
+USER 999
 
 WORKDIR /srv/florriebot
 
