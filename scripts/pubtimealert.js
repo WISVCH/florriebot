@@ -11,7 +11,7 @@ const PUB_TIME = "00 00 16 * * 3-5"; // Wed-Fri 16:00
 const ical = require('ical');
 
 const cronJob = (require('cron')).CronJob;
-let hasPrinted = false;
+
 module.exports = function(robot) {
   const ROOM = process.env.HUBOT_PUBALERT_ROOM;
 
@@ -38,15 +38,13 @@ module.exports = function(robot) {
       const event = Object.values(calendarEvents)
           .filter(event => {
             if (event.start.getTime) {
-              if (!hasPrinted) {
-                console.log(`Event ${event.summary} has time ${event.start.getTime()} with offset ${event.start.getTimezoneOffset()}`);
-              }
+              console.log(`Event ${event.summary} has time ${event.start.getTime()} with offset ${event.start.getTimezoneOffset()}`);
               return event.start.getTime() === todaysStartTime
             }
             return false;
           }
           )[0];
-      hasPrinted = true;
+
       if (event) {
         alertRooms(`The /Pub is open! ${event.summary}. Have a beer! 🍻`)
       }
