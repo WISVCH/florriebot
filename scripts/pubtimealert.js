@@ -26,10 +26,8 @@ module.exports = function(robot) {
 
   async function cronCallback() {
     const now = new Date();
-    console.log(`Now is ${now}`);
     now.setHours(16, 0, 0, 0);
     const todaysStartTime = now.getTime();
-    console.log(`Start time is ${todaysStartTime} with offset ${now.getTimezoneOffset()}`);
 
     try {
       const calendar = await fetch('https://pub.etv.tudelft.nl/ical/getcalender?barkeeperId=all');
@@ -38,7 +36,6 @@ module.exports = function(robot) {
       const event = Object.values(calendarEvents)
           .filter(event => {
             if (event.start.getTime) {
-              console.log(`Event ${event.summary} has time ${event.start.getTime()} with offset ${event.start.getTimezoneOffset()}`);
               return event.start.getTime() === todaysStartTime
             }
             return false;

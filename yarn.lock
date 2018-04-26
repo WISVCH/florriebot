@@ -746,9 +746,9 @@ hubot-youtube@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/hubot-youtube/-/hubot-youtube-1.1.0.tgz#c1653c1f8d3237b2a5bb64ddaf7bb67f3bd42e87"
 
-hubot@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/hubot/-/hubot-3.0.1.tgz#fe1bca4ece9c4f88f172047d63945b78d3623759"
+"hubot@git://github.com/hubotio/hubot.git#d0c13d2d8cd1ba30dc7f8765778988ca5a4d00c9":
+  version "0.0.0-development"
+  resolved "git://github.com/hubotio/hubot.git#d0c13d2d8cd1ba30dc7f8765778988ca5a4d00c9"
   dependencies:
     async ">=0.1.0 <1.0.0"
     chalk "^1.0.0"
