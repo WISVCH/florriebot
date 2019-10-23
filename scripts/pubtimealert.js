@@ -6,7 +6,7 @@
 const fetch = require('node-fetch');
 
 const TIMEZONE = "Europe/Amsterdam";
-const PUB_TIME = "00 00 16 * * 3-5"; // Wed-Fri 16:00
+const PUB_TIME = "00 00 16 * * 3-4"; // Wed-Thu 16:00
 
 const ical = require('ical');
 
@@ -30,7 +30,7 @@ module.exports = function(robot) {
     const todaysStartTime = now.getTime();
 
     try {
-      const calendar = await fetch('https://pub.etv.tudelft.nl/ical/getcalender?barkeeperId=all');
+      const calendar = await fetch('https://pub.etv.tudelft.nl/ical/feed/all');
       const calendarEvents = ical.parseICS(await calendar.text());
 
       const event = Object.values(calendarEvents)
